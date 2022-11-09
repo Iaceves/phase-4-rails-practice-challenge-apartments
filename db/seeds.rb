@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Apartment.destroy_all
+Tenant.destroy_all
+Lease.destroy_all
+
+
 
 a1 = Apartment.create(number: 4109)
 a2 = Apartment.create(number: 1107)
@@ -21,10 +26,10 @@ t6 = Tenant.create(name: "Jen Scott", age: 21)
 t7 = Tenant.create(name: "Bobbie Harry", age: 29)
 t8 = Tenant.create(name: "Reha bronsky", age: 29)
 
-Lease.create(apartment_id: a1.id, tenant_id: t1.id, rent: 1200)
-Lease.create(apartment_id: a2.id, tenant_id: t2.id, rent: 2200)
-Lease.create(apartment_id: a3.id, tenant_id: t3.id, rent: 1000)
-Lease.create(apartment_id: a4.id, tenant_id: t4.id, rent: 3200)
-Lease.create(apartment_id: a5.id, tenant_id: t5.id, rent: 4200)
-Lease.create(apartment_id: a3.id, tenant_id: t4.id, rent: 5020)
-Lease.create(apartment_id: a4.id, tenant_id: t1.id, rent: 1100)
+Lease.create!(apartment_id: a1.id, tenant_id: t1.id, rent: 1200)
+Lease.create!(apartment_id: a2.id, tenant_id: t2.id, rent: 2200)
+Lease.create!(apartment_id: a3.id, tenant_id: t3.id, rent: 1000)
+Lease.create!(apartment_id: a4.id, tenant_id: t4.id, rent: 3200)
+Lease.create!(apartment_id: a5.id, tenant_id: t5.id, rent: 4200)
+Lease.create!(apartment_id: a3.id, tenant_id: t4.id, rent: 5020)
+Lease.create!(apartment_id: a4.id, tenant_id: t1.id, rent: 1100)
